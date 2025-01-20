@@ -1,0 +1,11 @@
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #ffffff; // White text color for all tags
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px; // Fully rounded corners for a pill shape
+    text-align: center;
+    white-space: nowrap;
+    cursor: default;
+  }

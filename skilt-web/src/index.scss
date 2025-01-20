@@ -85,3 +85,10 @@ button:focus-visible {
   font-weight: 700; /* Bold */
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Albert Sans';
+  src: url('/static/AlbertSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}

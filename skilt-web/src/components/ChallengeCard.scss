@@ -1,0 +1,148 @@
+
+.challenge-card {
+    width: 800px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    color: rgb(0, 0, 0);
+    padding: 32px;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    border: 5px solid orange;
+    
+  }
+  
+  .image-section {
+    display: flex;
+    align-items: center;
+    padding-right: 32px;
+    justify-content: center;
+  }
+  
+  .image-upload {
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: lightgray; /* Default gray background */
+    position: relative;
+    
+  
+    &.uploaded {
+      background-color: transparent; /* Remove gray background when uploaded */
+    }
+  }
+  
+  .image-upload img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    
+   
+  }
+  
+  .hidden-file-input {
+    margin-top: 8px;
+    display: inline-block;
+  }
+  
+  
+  .uploaded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    
+  }
+  
+  .text-section {
+    font-family: 'Albert Sans', sans-serif; /* Use the custom font */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures all child elements are left-aligned */
+    text-align: left; /* Left-align text content */
+    font-weight: 300; /* Adjust to match Figma's appearance */
+  }
+
+
+  .text-section h1 {
+    font-family: 'Albert Sans', sans-serif; /* Use the custom font */
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300; /* Adjust to match Figma's appearance */
+    text-align: left;
+  }
+  
+  .text-section h2 {
+    font-family: 'Albert Sans', sans-serif; /* Use the custom font */
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+
+  }
+  
+  .text-section ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+  }
+  .text-section ol li {
+    margin-bottom: 8px; /* Adjust this value as needed */
+    line-height: 1.5; /* Optional: Improves readability */
+  }
+  
+  .text-section p {
+    text-align: center;
+  }
+  
+  .navigation {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    text-align: left;
+
+  }
+  
+  .navigation button {
+    min-width: 50px;
+    background: linear-gradient(to right, #ff7eb3, #ff914d); /* Gradient from pink to orange */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    
+  }
+  
+  .navigation button:hover {
+    background: linear-gradient(to right, #ff6aa0, #ff7a33); /* Slightly darker gradient on hover */
+}
+  
+  .navigation button:disabled {
+    opacity: 0;
+    cursor: not-allowed;
+  }
+  
+  .navigation p {
+    position: absolute;
+    left: 50%;
+    text-align: center; /* Center-align the text */
+    margin: 0; /* Remove margin for proper alignment */
+    font-size: 16px; /* Adjust font size as needed */
+  }
+  
+  .flip-horizontal {
+  transform: scaleX(-1);
+}
