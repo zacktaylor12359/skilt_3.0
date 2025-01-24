@@ -6,6 +6,7 @@ const App: React.FC = () => {
 
 	// Check localStorage on initial load
 	// Effect to check and apply theme on initial load
+	// TODO: Add logic to change the theme. Likely in a settings page
 	useEffect(() => {
 		const savedTheme = localStorage.getItem('theme');
 		if (savedTheme) {
