@@ -16,18 +16,6 @@ const App: React.FC = () => {
 		}
 	}, []);
 
-	//TODO: This function will likely be moved to some sort of settings page. It is not assigned to any button for now
-	// Function to toggle theme and save it to localStorage
-	// const toggleTheme = () => {
-	// 	const newTheme = document.body.classList.contains('light-theme')
-	// 		? 'dark-theme'
-	// 		: 'light-theme';
-	// 	document.body.classList.replace('light-theme', newTheme); // Replace the theme class
-	// 	document.body.classList.replace('dark-theme', newTheme); // In case of switching to light theme
-
-	// 	localStorage.setItem('theme', newTheme); // Save theme to localStorage
-	// };
-
 	return (
 		<>
 			<p>{content.sample}</p>
