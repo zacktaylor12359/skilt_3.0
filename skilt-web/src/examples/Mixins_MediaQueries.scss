@@ -1,0 +1,17 @@
+@use '../globals/styles/mixins.scss' as mix_ins;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .square {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+  }
+
+  @include mix_ins.for-size(phone-only) {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,41 @@
+// global-variables.scss
+$light-mode: (
+  primary: #007bff,
+  secondary: #6c757d,
+  background_color: #ffffff,
+  text_color: #212529,
+);
+
+$dark-mode: (
+  primary: #0d6efd,
+  secondary: #adb5bd,
+  background_color: #121212,
+  text_color: #f8f9fa,
+);
+
+@use "sass:map";
+:root {
+  --primary: #{map.get($light-mode, primary)};
+  --secondary: #{map.get($light-mode, secondary)};
+  --background: #{map.get($light-mode, background_color)};
+  --text: #{map.get($light-mode, text_color)};
+}
+
+[data-theme='light'] {
+  --primary: #{map.get($light-mode, primary)};
+  --secondary: #{map.get($light-mode, secondary)};
+  --background: #{map.get($light-mode, background_color)};
+  --text: #{map.get($light-mode, text_color)};
+}
+
+[data-theme='dark'] {
+  --primary: #{map.get($dark-mode, primary)};
+  --secondary: #{map.get($dark-mode, secondary)};
+  --background: #{map.get($dark-mode, background_color)};
+  --text: #{map.get($dark-mode, text_color)};
+}
+
+$primary: var(--primary);
+$secondary: var(--secondary);
+$background: var(--background);
+$text: var(--text);
