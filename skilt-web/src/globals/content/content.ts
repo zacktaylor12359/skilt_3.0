@@ -6,6 +6,7 @@ export type Content = {
 		text: string;
 	};
 	footer: string;
+	cardList: string[];
 };
 
 const content: Content = {
@@ -16,6 +17,7 @@ const content: Content = {
 		text: 'Click me',
 	},
 	footer: 'All rights reserved',
+	cardList: ['testing', 'testing']
 };
 
 export default content;
