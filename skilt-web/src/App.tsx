@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect } from 'react';
+import { useContent } from './context_store/ContentContext';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+	const { content } = useContent();
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+	// Check localStorage on initial load
+	// Effect to check and apply theme on initial load
+	// TODO: Add logic to change the theme. Likely in a settings page
+	useEffect(() => {
+		const savedTheme = localStorage.getItem('theme');
+		if (savedTheme) {
+			document.body.classList.add(savedTheme);
+		} else {
+			// Apply default theme if nothing is saved
+			document.body.classList.add('light-theme');
+		}
+	}, []);
 
-export default App
+	return (
+		<>
+			<p>{content.sample}</p>
+		</>
+	);
+};
+
+export default App;

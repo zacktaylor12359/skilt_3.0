@@ -1,10 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { ContentProvider } from './context_store/ContentContext.tsx';
+import './index.scss';
+// import ChallengeCard from "components/ChallengeCard";
+
+import App from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+	<StrictMode>
+		<ContentProvider>
+			<App />
+		</ContentProvider>
+	</StrictMode>
+);

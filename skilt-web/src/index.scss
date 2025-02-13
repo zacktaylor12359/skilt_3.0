@@ -1,0 +1,40 @@
+@use './globals/styles/variables.scss' as variables;
+@use './globals/styles/mixins.scss' as mix_ins;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: variables.$text;
+  background-color: variables.$background;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+}
+
+@font-face {
+  font-family: 'Albert Sans';
+  src: url('./path-to-font/AlbertSans-Regular.woff2') format('woff2'),
+       url('./path-to-font/AlbertSans-Regular.woff') format('woff'),
+       url('./path-to-font/AlbertSans-Regular.ttf') format('truetype');
+  font-weight: 400; /* Adjust weight (400 for Regular) */
+  font-style: normal;
+}
+
+/* Optionally include other styles like Bold, Italic */
+@font-face {
+  font-family: 'Albert Sans';
+  src: url('./path-to-font/AlbertSans-Bold.woff2') format('woff2');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
