@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useContent } from './context_store/ContentContext';
+import FrontPage from "./components/FrontPage";
 
 const App: React.FC = () => {
 	const { content } = useContent();
@@ -20,6 +21,7 @@ const App: React.FC = () => {
 	return (
 		<>
 			<p>{content.sample}</p>
+			<FrontPage/>
 		</>
 	);
 };
